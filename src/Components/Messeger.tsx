@@ -1,5 +1,5 @@
 import { Send, User } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 type Message = {
   id: number;
@@ -10,7 +10,7 @@ type Message = {
 
 type UserType = 'User1' | 'User2';
 
-const Messenger = () => {
+const Messenger: React.FC = () => {
   const [currentUser, setCurrentUser] = useState<UserType>('User1');
   const [messages, setMessages] = useState<Message[]>([]);
   const [newMessage, setNewMessage] = useState<string>('');
